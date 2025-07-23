@@ -1,0 +1,143 @@
+@server=http://localhost:4004
+
+
+### Alunos
+# @name Alunos_GET
+GET {{server}}/service/university/Alunos
+
+
+
+### Alunos
+# @name Alunos_POST
+POST {{server}}/service/university/Alunos
+Content-Type: application/json
+
+{
+  "ID": "42138102-1aeb-4fce-8068-dd13a5ce1b57",
+  "nome": "nome-4213810",
+  "inscricao": "inscricao-4213810",
+  "dataIngresso": "2001-03-20",
+  "indiceDesempenho": 124.28,
+  "createdAt": "2019-11-27T00:00:00.000Z",
+  "createdBy": "createdBy.2ibea@example.org",
+  "modifiedAt": "2000-06-09T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.2ibea@example.net"
+}
+
+
+### Alunos
+# @name Alunos_PATCH
+PATCH {{server}}/service/university/Alunos/42138102-1aeb-4fce-8068-dd13a5ce1b57
+Content-Type: application/json
+
+{
+  "ID": "42138102-1aeb-4fce-8068-dd13a5ce1b57",
+  "nome": "nome-4213810",
+  "inscricao": "inscricao-4213810",
+  "dataIngresso": "2001-03-20",
+  "indiceDesempenho": 999.28,
+  "createdAt": "2019-11-27T00:00:00.000Z",
+  "createdBy": "createdBy.2ibea@example.org",
+  "modifiedAt": "2000-06-09T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.2ibea@example.net"
+}
+
+
+### Alunos
+# @name Alunos_DELETE
+DELETE {{server}}/service/university/Alunos/42138102-1aeb-4fce-8068-dd13a5ce1b57
+Content-Type: application/json
+
+
+### Disciplinas
+# @name Disciplinas_GET
+GET {{server}}/service/university/Disciplinas
+
+
+
+### Disciplinas
+# @name Disciplinas_POST
+POST {{server}}/service/university/Disciplinas
+Content-Type: application/json
+
+{
+  "ID": "31732084-18ce-494b-907e-e58bd4e2000f",
+  "nome": "nome-31732084",
+  "departamento": "departamento-31732084",
+  "semestre": 14,
+  "ano": 21
+}
+
+
+### Disciplinas
+# @name Disciplinas_PATCH
+PATCH {{server}}/service/university/Disciplinas/31732084-18ce-494b-907e-e58bd4e2000f
+Content-Type: application/json
+
+{
+  "ID": "31732084-18ce-494b-907e-e58bd4e2000f",
+  "nome": "nome-31732084",
+  "departamento": "departamento-31732084",
+  "semestre": 14,
+  "ano": 21
+}
+
+
+### Disciplinas
+# @name Disciplinas_DELETE
+DELETE {{server}}/service/university/Disciplinas/31732084-18ce-494b-907e-e58bd4e2000f
+Content-Type: application/json
+
+
+### Matriculas
+# @name Matriculas_GET
+GET {{server}}/service/university/Matriculas
+
+
+
+### Matriculas
+# @name Matriculas_POST
+POST {{server}}/service/university/Matriculas
+Content-Type: application/json
+
+{
+  "ID": "26781733-1bca-47cf-85ed-300122c2f31f",
+  "aluno": {
+    "ID": "42138102-1aeb-4fce-8068-dd13a5ce1b57"
+  },
+  "disciplina": {
+    "ID": "31732084-18ce-494b-907e-e58bd4e2000f"
+  },
+  "semestre": 58,
+  "ano": 26
+}
+
+
+### Matriculas
+# @name Matriculas_PATCH
+PATCH {{server}}/service/university/Matriculas/26781733-1bca-47cf-85ed-300122c2f31f
+Content-Type: application/json
+
+{
+  "ID": "26781733-1bca-47cf-85ed-300122c2f31f",
+  "aluno": {
+    "ID": "42138102-1aeb-4fce-8068-dd13a5ce1b57"
+  },
+  "disciplina": {
+    "ID": "31732084-18ce-494b-907e-e58bd4e2000f"
+  },
+  "semestre": 58,
+  "ano": 26
+}
+
+
+### Matriculas
+# @name Matriculas_DELETE
+DELETE {{server}}/service/university/Matriculas/26781733-1bca-47cf-85ed-300122c2f31f
+Content-Type: application/json
+
+
+
+### Functions
+# @name Matricular
+GET {{server}}/service/university/matricular?alunoId=0e7e13ea-9610-4a2a-b526-4c76bf39b04a&disciplinaId=b940f13b-89ff-4bed-93f5-ff1ecdbd6887

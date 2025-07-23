@@ -52,6 +52,10 @@ module.exports = class universitySrv extends cds.ApplicationService {
 
       // Insert the new Matricula record
       try {
+        // // Create a new Matricula entry
+        // await INSERT.into(Matriculas)
+        //   .columns('ID','aluno_ID', 'disciplina_ID', 'semestre', 'ano')
+        //   .values(cds.utils.uuid(),alunoId, disciplinaId, 2, 2025);
         await INSERT.into(Matriculas).entries(
           {
             aluno_ID : alunoId,
